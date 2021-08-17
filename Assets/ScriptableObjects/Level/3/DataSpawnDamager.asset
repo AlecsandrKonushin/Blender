@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3450a33c87679f747ab28caf60571ade, type: 3}
-  m_Name: Recipe
+  m_Script: {fileID: 11500000, guid: 96085e52553ddcb4d8c1accff6ed0c96, type: 3}
+  m_Name: DataSpawnDamager
   m_EditorClassIdentifier: 
-  PartsRecipe:
-  - {fileID: 11400000, guid: 7bb8ef6b68ce0d043922cac0015a46e6, type: 2}
-  - {fileID: 11400000, guid: a261d5ebb6e91e847afd2e3e9793d5fb, type: 2}
+  TypeObject: 1
+  ProcentRandom: 20
+  TypeDamager: 0
