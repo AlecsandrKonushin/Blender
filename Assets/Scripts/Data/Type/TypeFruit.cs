@@ -3,5 +3,6 @@
     Apple,
     Orange,
     Banana,
-    Strawberry
+    Strawberry,
+    Kiwi,
 }
