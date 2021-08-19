@@ -31,7 +31,14 @@ public class ConChooseFruitForSpawn : MonoBehaviour
 
             if (dataSpawnObj.TypeObject == TypeObject.Damager)
             {
-                newObject = damagers[0].gameObject;
+                foreach (var damager in damagers)
+                {
+                    if(damager.GetTypeDamager == (dataSpawnObj as DataSpawnDamager).TypeDamager)
+                    {
+                        newObject = damager.gameObject;
+                        break;
+                    }
+                }
             }
             else if (dataSpawnObj.TypeObject == TypeObject.Fruit)
             {
