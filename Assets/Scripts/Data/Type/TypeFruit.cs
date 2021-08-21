@@ -5,4 +5,7 @@
     Banana,
     Strawberry,
     Kiwi,
+    Mango,
+    Lemon,
+    Watermelon,
 }
