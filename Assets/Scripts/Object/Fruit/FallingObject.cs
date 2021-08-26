@@ -2,6 +2,8 @@
 
 public class FallingObject : MonoBehaviour
 {
+    [SerializeField] private AudioClip soundFall;
+
     private Rigidbody rigidBody;
 
     private void Awake()
@@ -32,6 +34,15 @@ public class FallingObject : MonoBehaviour
     public void FallInBlender()
     {
         rigidBody.constraints = RigidbodyConstraints.None;
+
+        if (soundFall != null)
+        {
+            ManagerAudio.Instance.PlaySound(soundFall);
+        }
+        else
+        {
+            Debug.Log($"<color=red>Не добавил аудио клип в объект {gameObject.name}</color>");
+        }
     }
 
     /// <summary>

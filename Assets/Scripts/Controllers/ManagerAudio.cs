@@ -33,7 +33,29 @@ public class ManagerAudio : Singleton<ManagerAudio>
     /// <param name="audio"></param>
     public void PlaySound(AudioClip audio)
     {
+        AudioSource source = soundAudio1;
 
+        if (soundAudio1.isPlaying)
+        {
+            if (soundAudio2.isPlaying)
+            {
+                if (soundAudio3.isPlaying)
+                {
+                    source = soundAudio1;
+                }
+                else
+                {
+                    source = soundAudio3;
+                }
+            }
+            else
+            {
+                source = soundAudio2;
+            }
+        }
+
+        source.clip = audio;
+        source.Play();
     }
 
     /// <summary>
