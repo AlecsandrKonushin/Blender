@@ -29,7 +29,7 @@ public class FallingObject : MonoBehaviour
     /// <summary>
     /// Включение возможности смещения по оси X
     /// </summary>
-    public void AxisXEnable()
+    public void FallInBlender()
     {
         rigidBody.constraints = RigidbodyConstraints.None;
     }
