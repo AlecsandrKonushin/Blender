@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9b421e8c92d7f419c803e1932b2417, type: 3}
   m_Name: PartRecipe_Banana
   m_EditorClassIdentifier: 
-  TypeFruit: 5
+  TypeFruit: 3
   CountFruit: 4

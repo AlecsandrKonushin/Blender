@@ -6,6 +6,6 @@
     Strawberry,
     Kiwi,
     Mango,
-    Lemon,
+    Melon,
     Watermelon,
 }
