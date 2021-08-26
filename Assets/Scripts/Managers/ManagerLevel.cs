@@ -14,6 +14,8 @@ public class ManagerLevel : Singleton<ManagerLevel>
     /// </summary>
     public void NextLevel()
     {
+        ManagerAudio.Instance.PlayMusicLevel();
+
         StartRecipe();
         SetSpawnData();
     }
