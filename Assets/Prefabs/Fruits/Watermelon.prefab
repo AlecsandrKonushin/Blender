@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d0317d9f0547e40b8e35bbc126ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundFall: {fileID: 8300000, guid: f1dcea0efc4b17943b79e2760953e221, type: 3}
   TypeFruit: 7
 --- !u!1001 &5609155206705973644
 PrefabInstance:
