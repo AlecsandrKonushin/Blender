@@ -15,3 +15,4 @@ MonoBehaviour:
   PartsRecipe:
   - {fileID: 11400000, guid: 28ff8ed95b743994db5b6caffe874ad5, type: 2}
   - {fileID: 11400000, guid: 1fd58cc8986568d47a7c209253b4b31a, type: 2}
+  - {fileID: 11400000, guid: 3b3199beff7b09b4d9d67110470d4d89, type: 2}

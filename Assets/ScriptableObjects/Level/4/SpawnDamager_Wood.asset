@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpawnDamager_Wood
   m_EditorClassIdentifier: 
   TypeObject: 1
-  ProcentRandom: 10
+  ProcentRandom: 25
   TypeDamager: 0

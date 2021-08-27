@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpawnObjects
   m_EditorClassIdentifier: 
   DataSpawn:
-  - {fileID: 11400000, guid: 3ec25382989884d45a90f5f1db4249fb, type: 2}
   - {fileID: 11400000, guid: 53a1e2b482935c44fa98de596e64fea1, type: 2}
   - {fileID: 11400000, guid: 5c11f002790088f46a95aacf607d23cf, type: 2}
   - {fileID: 11400000, guid: 171f40b0d31038a48944331af0b9891b, type: 2}
+  - {fileID: 11400000, guid: 30e8415963eac354cb6f327a1b85b67e, type: 2}
