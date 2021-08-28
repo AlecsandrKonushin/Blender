@@ -9,6 +9,8 @@ public class BlenderFloorCollision : MonoBehaviour
 
         string tag = collision.gameObject.tag;
 
+        collision.gameObject.GetComponent<FallingObject>().TouchFloorBlender();
+
         if (tag == DataTags.Fruit.ToString())
         {
             if (collision.gameObject.TryGetComponent<Fruit>(out Fruit fruit))
