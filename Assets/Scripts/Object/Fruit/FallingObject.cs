@@ -31,10 +31,13 @@ public class FallingObject : MonoBehaviour
     /// <summary>
     /// Включение возможности смещения по оси X
     /// </summary>
-    public void FallInBlender()
+    public void TouchWallBlender()
     {
         rigidBody.constraints = RigidbodyConstraints.None;
+    }
 
+    public void TouchFloorBlender()
+    {
         if (soundFall != null)
         {
             ManagerAudio.Instance.PlaySound(soundFall);

@@ -8,7 +8,7 @@ public class BlenderWallCollision : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent<Fruit>(out Fruit fruit))
             {
-                fruit.FallInBlender();
+                fruit.TouchWallBlender();
             }
             else
             {
