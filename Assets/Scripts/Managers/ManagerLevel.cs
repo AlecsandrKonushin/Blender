@@ -4,10 +4,10 @@ using UnityEngine;
 public class ManagerLevel : Singleton<ManagerLevel>
 {
     [SerializeField] private DataLevel[] levels;
+    [SerializeField] private int currentNumberLevel = 0;
 
     private DataRecipe currentRecipe;
-    private int currentNumberLevel = 0;
-    private DataNeedFruit dataNeedFruit;
+    private DataNeedFruit dataNeedFruit;    
 
     /// <summary>
     /// Init Следующего level

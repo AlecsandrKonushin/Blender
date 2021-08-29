@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class ManagerAudio : Singleton<ManagerAudio>
+public class ManagerAudio : DontDestroySingleton<ManagerAudio>
 {
     [SerializeField] private AudioSource mainAudio;
     [SerializeField] private AudioSource soundAudio1;

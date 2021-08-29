@@ -13,6 +13,7 @@ public class ConCamera : Singleton<ConCamera>
 
     public void FrostCamera()
     {
+        frostEffect.enabled = true;
         frostEffect.FrostScreen();
     }
 

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class ButtonMy : MonoBehaviour
 {
-    //[SerializeField] protected TypeUISound soundClick = TypeUISound.ButtonClick;
+    [SerializeField] protected AudioClip soundButton;
 
     private void Start()
     {
@@ -13,7 +13,14 @@ public class ButtonMy : MonoBehaviour
 
     private void ClickByButton()
     {
-        //ControllerAudio.Instance.PlayUISound(soundClick);
+        if (soundButton != null)
+        {
+            ManagerAudio.Instance.PlaySound(soundButton);
+        }
+        else
+        {
+            Debug.Log($"<color=red>Не добавил аудио клип в кнопку {gameObject.name}!</color>");
+        }
 
         OtherButtonAction();
     }

@@ -3,6 +3,9 @@
 [RequireComponent(typeof(BlenderMovement))]
 public class Blender : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] soundBlender;
+    private int countSound = 0;
+
     private int numberLine = 0;
     private int numberNextLine;
     public int GetNumberLine { get => numberLine; }
@@ -33,6 +36,8 @@ public class Blender : MonoBehaviour
 
     private void MoveToLine(int numberLine)
     {
+        ManagerAudio.Instance.PlaySound(soundBlender[ChangeClipSound()]);
+
         numberNextLine = numberLine;
         movement.AfterEndMove += ChangeNumberLine;
         movement.MoveToLine(numberLine);
@@ -40,7 +45,19 @@ public class Blender : MonoBehaviour
 
     private void MoveToLineBeside(bool right)
     {
+        ManagerAudio.Instance.PlaySound(soundBlender[ChangeClipSound()]);
+
         movement.MoveToLineBeside(right);
+    }
+
+    private int ChangeClipSound()
+    {
+        countSound++;
+
+        if (countSound >= soundBlender.Length)
+            countSound = 0;
+
+        return countSound;
     }
 
     private void ChangeNumberLine()
