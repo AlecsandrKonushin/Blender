@@ -52,6 +52,8 @@ public class ConChooseFruitForSpawn : MonoBehaviour
                 }
             }
 
+            newObject.GetComponent<Rigidbody>().drag = dataSpawnObj.DragObject;
+
             for (int r = 0; r < countObject; r++)
             {
                 objForSpawn.Add(newObject);

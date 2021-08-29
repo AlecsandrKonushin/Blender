@@ -7,7 +7,7 @@ public class ManagerLevel : Singleton<ManagerLevel>
     [SerializeField] private int currentNumberLevel = 0;
 
     private DataRecipe currentRecipe;
-    private DataNeedFruit dataNeedFruit;    
+    private DataNeedFruit dataNeedFruit;
 
     /// <summary>
     /// Init Следующего level
@@ -40,7 +40,35 @@ public class ManagerLevel : Singleton<ManagerLevel>
 
     private void SetSpawnData()
     {
+        CheckDragLevel(levels[currentNumberLevel]);
         ManagerSpawner.Instance.SetDataSpawn(levels[currentNumberLevel].DataSpawnObjects);
+    }
+
+    private void CheckDragLevel(DataLevel level)
+    {
+        foreach (var spawnObject in level.DataSpawnObjects.DataSpawn)
+        {
+            if (spawnObject.DragObject == 0)
+            {
+                if (spawnObject.TypeObject == TypeObject.Damager)
+                {
+                    DataSpawnDamager spawnDamager = spawnObject as DataSpawnDamager;
+
+                    if (spawnDamager.TypeDamager == TypeDamager.Ice)
+                    {
+                        spawnDamager.DragObject = 2f;
+                    }
+                    else if (spawnDamager.TypeDamager == TypeDamager.Tree)
+                    {
+                        spawnObject.DragObject = 4f;
+                    }
+                }
+                else
+                {
+                    spawnObject.DragObject = 3;
+                }
+            }
+        }
     }
 
     /// <summary>
