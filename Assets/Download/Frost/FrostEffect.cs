@@ -63,6 +63,7 @@ public class FrostEffect : MonoBehaviour
         {
             FrostAmount = minValueFrost;
             action = false;
+            this.enabled = false;
         }
     }
 

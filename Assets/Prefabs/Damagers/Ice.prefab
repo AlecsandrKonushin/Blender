@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf3af22e1b081247a58e3a710abf4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundFall: {fileID: 8300000, guid: 4825a320b12acff4fbaa59035cb92843, type: 3}
   typeDamager: 1
 --- !u!135 &2362996629952143107
 SphereCollider:

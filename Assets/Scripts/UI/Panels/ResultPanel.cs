@@ -12,7 +12,7 @@ public class ResultPanel : MonoBehaviour
     private const float timeHide = 0.5f;
 
     private const string winText = "Победа!";
-    private const string loseText = "Проигрышь!";
+    private const string loseText = "Проигрыш!";
 
     public void ShowWinPanel()
     {
