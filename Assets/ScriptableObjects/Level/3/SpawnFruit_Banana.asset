@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b2422c563e879e428dc0fd236ea7daa, type: 3}
-  m_Name: DataSpawnFruit
+  m_Name: SpawnFruit_Banana
   m_EditorClassIdentifier: 
   TypeObject: 0
   ProcentRandom: 40
-  DragObject: 3
-  TypeFruit: 0
+  DragObject: 1
+  TypeFruit: 2

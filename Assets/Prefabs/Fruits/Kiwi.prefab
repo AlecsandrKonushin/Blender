@@ -105,7 +105,7 @@ Rigidbody:
   m_GameObject: {fileID: 5802308927256515514}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 2
+  m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d0317d9f0547e40b8e35bbc126ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFall: {fileID: 0}
+  soundFall: {fileID: 8300000, guid: 6e3a447eedf1f6745a302b6caf3155e6, type: 3}
   TypeFruit: 4
 --- !u!1001 &2441671717164444955
 PrefabInstance:
