@@ -60,12 +60,12 @@ public class ManagerLevel : Singleton<ManagerLevel>
                     }
                     else if (spawnDamager.TypeDamager == TypeDamager.Tree)
                     {
-                        spawnObject.DragObject = 4f;
+                        spawnObject.DragObject = 3f;
                     }
                 }
                 else
                 {
-                    spawnObject.DragObject = 3;
+                    spawnObject.DragObject = 2;
                 }
             }
         }
@@ -96,7 +96,15 @@ public class ManagerLevel : Singleton<ManagerLevel>
     {
         ManagerCanvaces.Instance.ShowWinLevel();
         currentNumberLevel++;
-        ManagerMain.Instance.LevelWin();
+
+        if (currentNumberLevel >= levels.Length)
+        {
+            ManagerMain.Instance.EndLevels();
+        }
+        else
+        {
+            ManagerMain.Instance.LevelWin();
+        }
     }
 
     public void CheckDamager(Damager damager)

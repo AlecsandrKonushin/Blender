@@ -1,4 +1,6 @@
-﻿public class ManagerMain : Singleton<ManagerMain>
+﻿using UnityEngine;
+
+public class ManagerMain : Singleton<ManagerMain>
 {
     private void Start()
     {
@@ -35,5 +37,13 @@
         ManagerObjects.Instance.DestroyAllObjects();
         ManagerLevel.Instance.NextLevel();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
+    }
+
+    /// <summary>
+    /// Все уровни пройдены
+    /// </summary>
+    public void EndLevels()
+    {
+        Debug.Log("Уровни кончились!");
     }
 }

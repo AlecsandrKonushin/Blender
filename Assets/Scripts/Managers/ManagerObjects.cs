@@ -23,7 +23,6 @@ public class ManagerObjects : Singleton<ManagerObjects>
     {
         if(fruits.Count > 0)
         {
-            Debug.Log("count = " + fruits.Count);
             foreach (var fruit in fruits)
             {
                 fruit.StopObject();

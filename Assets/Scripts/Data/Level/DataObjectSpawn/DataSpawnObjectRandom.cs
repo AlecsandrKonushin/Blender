@@ -4,5 +4,5 @@ public class DataSpawnObjectRandom : ScriptableObject
 {
     public TypeObject TypeObject;
     public float ProcentRandom;
-    public float DragObject = 3f;
+    public float DragObject = 2f;
 }
