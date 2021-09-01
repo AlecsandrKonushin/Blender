@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundFall: {fileID: 8300000, guid: f1dcea0efc4b17943b79e2760953e221, type: 3}
   TypeFruit: 7
+  typeColor: 3
 --- !u!1001 &5609155206705973644
 PrefabInstance:
   m_ObjectHideFlags: 0

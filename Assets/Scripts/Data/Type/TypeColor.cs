@@ -1,5 +1,8 @@
 ﻿public enum TypeColor
 {
     Green,
-    Yellow
+    Yellow,
+    Orange,
+    Red,
+
 }

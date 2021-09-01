@@ -6,6 +6,8 @@ public class EffectSlicing : MonoBehaviour
     [SerializeField] private ParticleSystem particleObject;
     [SerializeField] private Color green;
     [SerializeField] private Color yellow;
+    [SerializeField] private Color orange;
+    [SerializeField] private Color red;
 
     [SerializeField] private float timeEffect;
 
