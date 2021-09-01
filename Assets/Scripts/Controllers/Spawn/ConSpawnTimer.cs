@@ -3,7 +3,7 @@
 public class ConSpawnTimer : MonoBehaviour
 {
     private float timeSpawn = 2f;
-    private float timeBeforeSpawn = 0f;
+    private float timeBeforeSpawn = 2f;
 
     public bool TimeGo { set; private get; }
     public bool SpawnNow { set; private get; }
@@ -20,6 +20,12 @@ public class ConSpawnTimer : MonoBehaviour
                 TimeForSpawn();
             }
         }
+    }
+
+    public void SetTimeSpawn(float timeSpawn)
+    {
+        this.timeSpawn = timeSpawn;
+        timeBeforeSpawn = timeSpawn;
     }
 
     private void TimeForSpawn()

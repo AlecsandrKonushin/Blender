@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataRecipe: {fileID: 11400000, guid: 881ba08fd13dc2d4889bd07652b787c3, type: 2}
   DataSpawnObjects: {fileID: 11400000, guid: 3aa688ffdef3e5145967e1e6902c9eeb, type: 2}
+  TimeSpawn: 2
