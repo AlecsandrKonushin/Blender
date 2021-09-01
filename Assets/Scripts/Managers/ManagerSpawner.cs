@@ -11,9 +11,11 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
     /// Установить Objects, которые будет спауниться на уровне
     /// </summary>
     /// <param name="dataRecipe"></param>
-    public void SetDataSpawn(DataSpawnObjects dataSpawn)
+    public void SetDataSpawn(DataLevel dataLevel)
     {
-        conChooseFruit.SetDataSpawn(dataSpawn);
+        conSpawnTimer.SetTimeSpawn(dataLevel.TimeSpawn);
+        conChooseFruit.SetDataSpawn(dataLevel.DataSpawnObjects);
+        CreateObjectsInAllLines();
     }
 
     /// <summary>
@@ -32,10 +34,18 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
         CreateObject();
     }
 
-    private void CreateObject()
+    public void CreateObjectsInAllLines()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            CreateObject(i);
+        }
+    }
+
+    private void CreateObject(int numberLine = -1)
     {
         GameObject newObj = conChooseFruit.GetObjectForSpawn();
-        Vector3 position = conChoosePosition.GetPosition();
+        Vector3 position = conChoosePosition.GetPosition(numberLine);
         conSpawn.SpawnObject(newObj, position);
 
         conSpawnTimer.SpawnNow = false;

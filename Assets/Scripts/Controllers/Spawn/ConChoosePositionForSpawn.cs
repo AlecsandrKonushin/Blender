@@ -6,16 +6,23 @@ public class ConChoosePositionForSpawn : MonoBehaviour
 
     private int prevNumberPoints = 0;
 
-    public Vector3 GetPosition()
+    public Vector3 GetPosition(int number)
     {
-        int rnd = Random.Range(0, pointsSpawn.Length);
-
-        while (rnd == prevNumberPoints)
+        if (number != -1)
         {
-            rnd = Random.Range(0, pointsSpawn.Length);
+            return pointsSpawn[number].transform.position;
         }
+        else
+        {
+            int rnd = Random.Range(0, pointsSpawn.Length);
 
-        prevNumberPoints = rnd;
-        return pointsSpawn[rnd].transform.position;
+            while (rnd == prevNumberPoints)
+            {
+                rnd = Random.Range(0, pointsSpawn.Length);
+            }
+
+            prevNumberPoints = rnd;
+            return pointsSpawn[rnd].transform.position;
+        }
     }
 }

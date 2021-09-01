@@ -2,6 +2,8 @@
 
 public class BlenderFloorCollision : MonoBehaviour
 {
+    [SerializeField] private EffectSlicing effectSlicing;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!CheckPositionCollision())
@@ -15,6 +17,8 @@ public class BlenderFloorCollision : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent<Fruit>(out Fruit fruit))
             {
+                effectSlicing.ShowSliceFruit(fruit);
+
                 ManagerLevel.Instance.CheckFruit(fruit);
                 ManagerObjects.Instance.DestroyFruit(fruit);
             }

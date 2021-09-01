@@ -41,7 +41,7 @@ public class ManagerLevel : Singleton<ManagerLevel>
     private void SetSpawnData()
     {
         CheckDragLevel(levels[currentNumberLevel]);
-        ManagerSpawner.Instance.SetDataSpawn(levels[currentNumberLevel].DataSpawnObjects);
+        ManagerSpawner.Instance.SetDataSpawn(levels[currentNumberLevel]);
     }
 
     private void CheckDragLevel(DataLevel level)
