@@ -3328,10 +3328,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObject: {fileID: 1352751540}
   particleObject2: {fileID: 1302723136}
-  green: {r: 0.31633854, g: 1, b: 0, a: 1}
-  yellow: {r: 1, g: 1, b: 0.23113209, a: 1}
-  orange: {r: 0.9716981, g: 0.5447756, b: 0.132921, a: 1}
-  red: {r: 0.9056604, g: 0, b: 0, a: 1}
+  green: {r: 0, g: 1, b: 0, a: 1}
+  yellow: {r: 0.9290118, g: 1, b: 0, a: 1}
+  orange: {r: 1, g: 0.67565244, b: 0.36320752, a: 1}
+  red: {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
   timeEffect: 1.5
 --- !u!1 &963194225
 GameObject:
