@@ -44,6 +44,8 @@ public class ManagerMain : Singleton<ManagerMain>
     /// </summary>
     public void EndLevels()
     {
-        Debug.Log("Уровни кончились!");
+        ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
+
+        ManagerCanvaces.Instance.ShowEndLevelPanel();
     }
 }

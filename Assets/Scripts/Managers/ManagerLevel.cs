@@ -15,6 +15,7 @@ public class ManagerLevel : Singleton<ManagerLevel>
     public void NextLevel()
     {
         ManagerAudio.Instance.PlayMusicLevel();
+        ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
 
         StartRecipe();
         SetSpawnData();

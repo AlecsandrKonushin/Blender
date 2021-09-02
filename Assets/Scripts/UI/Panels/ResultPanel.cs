@@ -9,7 +9,7 @@ public class ResultPanel : MonoBehaviour
     [SerializeField] private GameObject nextLevelButton;
     [SerializeField] private GameObject restartLevelButton;
 
-    private const float timeHide = 0.5f;
+    private const float timeHide = 0.3f;
 
     private const string winText = "Победа!";
     private const string loseText = "Проигрыш!";
