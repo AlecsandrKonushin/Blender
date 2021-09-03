@@ -3328,10 +3328,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObject: {fileID: 1352751540}
   particleObject2: {fileID: 1302723136}
-  green: {r: 0, g: 1, b: 0, a: 1}
-  yellow: {r: 0.9290118, g: 1, b: 0, a: 1}
-  orange: {r: 1, g: 0.67565244, b: 0.36320752, a: 1}
-  red: {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
+  green: {r: 0.08627451, g: 0.45490196, b: 0.08627451, a: 1}
+  yellow: {r: 0.764531, g: 0.7830189, b: 0.22530258, a: 1}
+  orange: {r: 0.70980394, g: 0.35686275, b: 0.023529412, a: 1}
+  red: {r: 0.7019608, g: 0.07058824, b: 0.07058824, a: 1}
   timeEffect: 1.5
 --- !u!1 &963194225
 GameObject:
@@ -4331,11 +4331,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EffectSlicing
       objectReference: {fileID: 0}
-    - target: {fileID: 6615055600937301108, guid: 44835a18790605a43b16f32d48d54e71,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6615055600937301109, guid: 44835a18790605a43b16f32d48d54e71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4390,21 +4385,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615055600937301109, guid: 44835a18790605a43b16f32d48d54e71,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615055600937301109, guid: 44835a18790605a43b16f32d48d54e71,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615055600937301109, guid: 44835a18790605a43b16f32d48d54e71,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44835a18790605a43b16f32d48d54e71, type: 3}
