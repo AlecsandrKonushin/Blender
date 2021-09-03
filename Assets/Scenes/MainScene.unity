@@ -6313,7 +6313,7 @@ Transform:
   - {fileID: 44089116}
   - {fileID: 905718268}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057050471
 GameObject:
@@ -6409,95 +6409,6 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
---- !u!1001 &1278377530
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -17.16979
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 65.77099
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 99.50579
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 99.50574
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 99.50574
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_Name
-      value: Smooth_blender1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d947d1925a2aa81419d94e0b143f64db,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d947d1925a2aa81419d94e0b143f64db, type: 3}
 --- !u!1 &1343024281
 GameObject:
   m_ObjectHideFlags: 0
@@ -11602,7 +11513,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1401251161
+  m_SortingLayerID: -953404263
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1952896985

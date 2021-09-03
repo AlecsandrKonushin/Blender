@@ -48,6 +48,8 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
 
     private IEnumerator CoWaitHideResultPanel(bool nextLevel)
     {
+        ManagerObjects.Instance.DestroyAllObjects();
+
         resultPanel.HidePanel();
         yield return new WaitForSeconds(timeHideResultPanel);
 

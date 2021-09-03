@@ -21,7 +21,6 @@ public class ManagerMain : Singleton<ManagerMain>
     /// </summary>
     public void LevelNext()
     {
-        ManagerObjects.Instance.DestroyAllObjects();
         ManagerLevel.Instance.NextLevel();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }
