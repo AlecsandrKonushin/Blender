@@ -29,14 +29,19 @@ public class SettingsPanel : Singleton<SettingsPanel>
         if (ManagerScenes.Instance.GetIsGameScene)
         {
             ManagerStates.Instance.ChangeStateGame(TypeStateGame.Pause);
-            inMenuButton.SetActive(false);
+            inMenuButton.SetActive(true);
         }
         else
         {
-            inMenuButton.SetActive(true);
+            inMenuButton.SetActive(false);
         }
 
         panel.SetActive(true);
+
+        if (ManagerScenes.Instance.GetIsGameScene)
+        {
+            ManagerCanvaces.Instance.HideSettingsButton();
+        }
     }
 
     public void HidePanel()
@@ -55,7 +60,10 @@ public class SettingsPanel : Singleton<SettingsPanel>
             ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
         }
 
-        ManagerCanvaces.Instance.ShowSettingsButton();
+        if (ManagerScenes.Instance.GetIsGameScene)
+        {
+            ManagerCanvaces.Instance.ShowSettingsButton();
+        }
     }
 
     private void ChangeMusicVolume()

@@ -2,12 +2,18 @@
 
 public class ManagerScenes : DontDestroySingleton<ManagerScenes>
 {
-    private bool isGameScene;
+    private bool isGameScene = false;
     public bool GetIsGameScene { get => isGameScene; }
 
     public void LoadGameScene()
     {
         isGameScene = true;
         SceneManager.LoadScene(1);
+    }
+
+    public void LoadMenuScene()
+    {
+        isGameScene = false;
+        SceneManager.LoadScene(0);
     }
 }
