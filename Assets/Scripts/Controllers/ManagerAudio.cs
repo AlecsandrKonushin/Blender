@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class ManagerAudio : Singleton<ManagerAudio>
+public class ManagerAudio : DontDestroySingleton<ManagerAudio>
 {
     [SerializeField] private AudioSource mainAudio;
     [SerializeField] private AudioSource soundAudio1;
@@ -25,6 +25,9 @@ public class ManagerAudio : Singleton<ManagerAudio>
     public void ChangeSoundVolume(float value)
     {
         maxVolumeSound = value;
+        soundAudio1.volume = value;
+        soundAudio2.volume = value;
+        soundAudio3.volume = value;
     }
 
     /// <summary>

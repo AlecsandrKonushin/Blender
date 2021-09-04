@@ -25,7 +25,8 @@ public class FallingObject : MonoBehaviour
     /// </summary>
     public void GoObject()
     {
-        rigidBody.useGravity = true;
+        if (rigidBody != null)
+            rigidBody.useGravity = true;
     }
 
     /// <summary>

@@ -47,6 +47,14 @@ public class ManagerObjects : Singleton<ManagerObjects>
                 fruit.GoObject();
             }
         }
+
+        if (damagers.Count > 0)
+        {
+            foreach (var damager in damagers)
+            {
+                damager.GoObject();
+            }
+        }
     }
 
     /// <summary>
