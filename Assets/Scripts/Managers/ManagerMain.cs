@@ -1,9 +1,8 @@
-﻿using UnityEngine;
-
-public class ManagerMain : Singleton<ManagerMain>
+﻿public class ManagerMain : Singleton<ManagerMain>
 {
     private void Start()
     {
+        ManagerLevel.Instance.SetCurrentNumberLevel = ManagerSaveLoad.Instance.LoadLevel();
         ManagerLevel.Instance.NextLevel();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }

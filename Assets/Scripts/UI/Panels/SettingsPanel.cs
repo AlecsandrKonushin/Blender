@@ -15,12 +15,17 @@ public class SettingsPanel : Singleton<SettingsPanel>
 
     private void Start()
     {
+        musicSlider.value = ManagerSaveLoad.Instance.LoadMusicVolume();
+        soundSlider.value = ManagerSaveLoad.Instance.LoadSoundVolume();
+
         musicSlider.onValueChanged.AddListener(delegate { ChangeMusicVolume(); });
         soundSlider.onValueChanged.AddListener(delegate { ChangeSoundVolume(); });
     }
 
     public void ShowPanel()
     {
+        scoreText.text = textEndLevels + ManagerSaveLoad.Instance.LoadLevel();
+
         if (ManagerScenes.Instance.GetIsGameScene)
         {
             ManagerStates.Instance.ChangeStateGame(TypeStateGame.Pause);

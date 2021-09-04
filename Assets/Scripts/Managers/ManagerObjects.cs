@@ -25,7 +25,7 @@ public class ManagerObjects : Singleton<ManagerObjects>
         {
             foreach (var fruit in fruits)
             {
-                fruit.StopObject();
+                fruit.gameObject.SetActive(false);
             }
         }
 
@@ -33,7 +33,7 @@ public class ManagerObjects : Singleton<ManagerObjects>
         {
             foreach (var damager in damagers)
             {
-                damager.StopObject();
+                damager.gameObject.SetActive(false);
             }
         }
     }
@@ -44,7 +44,7 @@ public class ManagerObjects : Singleton<ManagerObjects>
         {
             foreach (var fruit in fruits)
             {
-                fruit.GoObject();
+                fruit.gameObject.SetActive(true);
             }
         }
 
@@ -52,7 +52,7 @@ public class ManagerObjects : Singleton<ManagerObjects>
         {
             foreach (var damager in damagers)
             {
-                damager.GoObject();
+                damager.gameObject.SetActive(true);
             }
         }
     }

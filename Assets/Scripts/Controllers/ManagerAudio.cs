@@ -16,10 +16,21 @@ public class ManagerAudio : DontDestroySingleton<ManagerAudio>
     private float maxVolumeMusic = 1f;
     private float maxVolumeSound = 1f;
 
+    private void Start()
+    {
+        float music = ManagerSaveLoad.Instance.LoadMusicVolume();
+        float sound = ManagerSaveLoad.Instance.LoadSoundVolume();
+
+        ChangeMusicVolume(music);
+        ChangeSoundVolume(sound);
+    }
+
     public void ChangeMusicVolume(float value)
     {
         maxVolumeMusic = value;
         mainAudio.volume = value;
+
+        ManagerSaveLoad.Instance.SaveMusicVolume(value);
     }
 
     public void ChangeSoundVolume(float value)
@@ -28,6 +39,8 @@ public class ManagerAudio : DontDestroySingleton<ManagerAudio>
         soundAudio1.volume = value;
         soundAudio2.volume = value;
         soundAudio3.volume = value;
+
+        ManagerSaveLoad.Instance.SaveSoundVolume(value);
     }
 
     /// <summary>

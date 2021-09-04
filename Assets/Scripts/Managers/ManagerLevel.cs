@@ -9,6 +9,8 @@ public class ManagerLevel : Singleton<ManagerLevel>
     private DataRecipe currentRecipe;
     private DataNeedFruit dataNeedFruit;
 
+    public int SetCurrentNumberLevel { set => currentNumberLevel = value; }
+
     /// <summary>
     /// Init Следующего level
     /// </summary>
@@ -104,6 +106,8 @@ public class ManagerLevel : Singleton<ManagerLevel>
         }
         else
         {
+            ManagerSaveLoad.Instance.SaveLevel(currentNumberLevel);
+
             ManagerMain.Instance.LevelWin();
         }
     }
