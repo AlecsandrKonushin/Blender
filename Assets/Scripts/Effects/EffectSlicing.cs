@@ -25,7 +25,6 @@ public class EffectSlicing : MonoBehaviour
 
     public void ShowSliceFruit(Fruit fruit)
     {
-        Debug.Log("slice");
         Color color = green;
 
         if (fruit.GetTypeColor == TypeColor.Green)
