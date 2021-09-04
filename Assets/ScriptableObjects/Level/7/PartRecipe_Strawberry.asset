@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PartRecipe_Strawberry
   m_EditorClassIdentifier: 
   TypeFruit: 3
-  CountFruit: 2
+  CountFruit: 5

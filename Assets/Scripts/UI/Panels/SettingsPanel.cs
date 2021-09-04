@@ -54,6 +54,8 @@ public class SettingsPanel : Singleton<SettingsPanel>
         {
             ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
         }
+
+        ManagerCanvaces.Instance.ShowSettingsButton();
     }
 
     private void ChangeMusicVolume()

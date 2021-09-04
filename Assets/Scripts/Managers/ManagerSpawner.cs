@@ -7,6 +7,9 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
     [SerializeField] private ConSpawnTimer conSpawnTimer;
     [SerializeField] private ConSpawn conSpawn;
 
+    private int countBeforeDoubleSpawn = 0;
+    private int countBeforeTripleSpawn = 3;
+
     /// <summary>
     /// Установить Objects, которые будет спауниться на уровне
     /// </summary>
@@ -15,6 +18,8 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
     {
         conSpawnTimer.SetTimeSpawn(dataLevel.TimeSpawn);
         conChooseFruit.SetDataSpawn(dataLevel.DataSpawnObjects);
+
+        CountDoubleSpawn();
         CreateObjectsInAllLines();
     }
 
@@ -31,7 +36,27 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
     /// </summary>
     public void TimeForSpawn()
     {
-        CreateObject();
+        if(countBeforeDoubleSpawn > 0)
+        {
+            countBeforeDoubleSpawn--;
+
+            CreateObject();
+        }
+        else
+        {
+            if(countBeforeTripleSpawn > 0)
+            {
+                countBeforeTripleSpawn--;
+                DoubleSpawn();
+            }
+            else
+            {
+                countBeforeTripleSpawn = 3;
+                TripleSpawn();
+            }
+
+            CountDoubleSpawn();
+        }
     }
 
     public void CreateObjectsInAllLines()
@@ -42,6 +67,25 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
         }
     }
 
+    private void DoubleSpawn()
+    {
+        CreateObject();
+        CreateObject();
+    }
+
+    private void TripleSpawn()
+    {
+        int noSpawnLine = Random.Range(0, 3);
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (i != noSpawnLine)
+            {
+                CreateObject(i);
+            }
+        }
+    }
+
     private void CreateObject(int numberLine = -1)
     {
         GameObject newObj = conChooseFruit.GetObjectForSpawn();
@@ -49,5 +93,10 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
         conSpawn.SpawnObject(newObj, position);
 
         conSpawnTimer.SpawnNow = false;
+    }
+
+    private void CountDoubleSpawn()
+    {
+        countBeforeDoubleSpawn = Random.Range(2, 4);
     }
 }

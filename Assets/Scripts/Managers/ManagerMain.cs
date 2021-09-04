@@ -2,7 +2,9 @@
 {
     private void Start()
     {
+#if !UNITY_EDITOR
         ManagerLevel.Instance.SetCurrentNumberLevel = ManagerSaveLoad.Instance.LoadLevel();
+#endif
         ManagerLevel.Instance.NextLevel();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }

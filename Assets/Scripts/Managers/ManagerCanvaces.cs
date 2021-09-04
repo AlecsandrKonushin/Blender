@@ -9,6 +9,7 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
     [SerializeField] private EndLevelPanel endLevelPanel;
 
     [SerializeField] private Text levelText;
+    [SerializeField] private GameObject settingsButton;
 
     private const string strLevel = "Уровень ";
     private float timeShowLevelText = 2f;
@@ -21,6 +22,7 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
     public void ShowRecipe(DataNeedFruit dataFruit)
     {
         recipePanel.ShowRecipe(dataFruit);
+        ShowSettingsButton();
     }
 
     /// <summary>
@@ -29,11 +31,13 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
     public void ShowWinLevel()
     {
         resultPanel.ShowWinPanel();
+        HideSettingsButton();
     }
 
     public void ShowLoseLevel()
     {
         resultPanel.ShowLosePanel();
+        HideSettingsButton();
     }
 
     public void ClickNextLevel()
@@ -62,6 +66,16 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
     public void ShowEndLevelPanel()
     {
         endLevelPanel.ShowPanel();
+    }
+
+    public void ShowSettingsButton()
+    {
+        settingsButton.SetActive(true);
+    }
+
+    public void HideSettingsButton()
+    {
+        settingsButton.SetActive(false);
     }
 
     public void ShowLevelText(int numberText)

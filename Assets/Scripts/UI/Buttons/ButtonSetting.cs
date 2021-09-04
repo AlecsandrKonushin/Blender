@@ -3,5 +3,6 @@
     protected override void OtherButtonAction()
     {
         SettingsPanel.Instance.ShowPanel();
+        gameObject.SetActive(false);
     }
 }
