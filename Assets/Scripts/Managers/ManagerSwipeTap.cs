@@ -10,7 +10,7 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
 
     [SerializeField] private ConSwipeTap conSwipeTap;
 
-    private int numberLineTap = -1;
+    private int numberLineTap = 0;
 
     /// <summary>
     /// Произошёл свайп в сторону right = bool
@@ -18,6 +18,15 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
     /// <param name="right"></param>
     public void DoSwipe(bool right)
     {
+        if (right)
+        {
+            numberLineTap++;
+        }
+        else
+        {
+            numberLineTap--;
+        }
+
         Swipe?.Invoke(right);
     }
 

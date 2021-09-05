@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5802308927256515514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -92,7 +92,7 @@ Rigidbody:
   m_GameObject: {fileID: 5802308927256515514}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.7
+  m_Drag: 1.5
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0

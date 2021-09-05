@@ -56,4 +56,9 @@ public class ManagerSaveLoad : DontDestroySingleton<ManagerSaveLoad>
             return 1;
         }
     }
+
+    public void ResetValueLevels()
+    {
+        PlayerPrefs.SetInt(levelName, 0);
+    }
 }
