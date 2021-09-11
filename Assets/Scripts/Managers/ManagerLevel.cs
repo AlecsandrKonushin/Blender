@@ -16,6 +16,7 @@ public class ManagerLevel : Singleton<ManagerLevel>
     /// </summary>
     public void NextLevel()
     {
+        ManagerTime.Instance.StartNextLevel(levels[currentNumberLevel].TimeLevel);
         ManagerAudio.Instance.PlayMusicLevel();
         ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
 

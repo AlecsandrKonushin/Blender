@@ -7,12 +7,14 @@
             ChangeCanSwipe(true);
             ChangeCanSpawnFruit(true);
             ManagerObjects.Instance.GoFruits();
+            ManagerTime.Instance.TimerGo();
         }
         else if (stateGame == TypeStateGame.LoadingLevel || stateGame == TypeStateGame.Pause)
         {
             ChangeCanSwipe(false);
             ChangeCanSpawnFruit(false);
             ManagerObjects.Instance.StopFallObjects();
+            ManagerTime.Instance.TimerStop();
         }
     }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 {
@@ -14,6 +12,6 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
             return;
         }
 
-        Instance = (T) this;
+        Instance = (T)this;
     }
 }
