@@ -3844,9 +3844,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObject: {fileID: 1352751540}
   particleObject2: {fileID: 1302723136}
-  green: {r: 0.08627451, g: 0.45490196, b: 0.08627451, a: 1}
-  yellow: {r: 0.764531, g: 0.7830189, b: 0.22530258, a: 1}
-  orange: {r: 0.70980394, g: 0.35686275, b: 0.023529412, a: 1}
+  green: {r: 0.2509804, g: 0.6901961, b: 0.20784314, a: 1}
+  yellow: {r: 0.93333334, g: 0.93333334, b: 0.13725491, a: 1}
+  orange: {r: 0.83137256, g: 0.34901962, b: 0.07450981, a: 1}
   red: {r: 0.7019608, g: 0.07058824, b: 0.07058824, a: 1}
   timeEffect: 1.5
 --- !u!1 &963194225
@@ -4963,6 +4963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EffectSlicing
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615055600937301108, guid: 44835a18790605a43b16f32d48d54e71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6615055600937301109, guid: 44835a18790605a43b16f32d48d54e71,
         type: 3}
