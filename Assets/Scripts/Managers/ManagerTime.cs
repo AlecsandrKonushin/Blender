@@ -2,9 +2,6 @@
 
 public class ManagerTime : Singleton<ManagerTime>
 {
-    // сделать textTime, отображать на нём время в секундах
-    // обработка, когда время вышло
-
     [SerializeField] private ConTimerLevel conTimerLevel;
 
     private bool needTimer = false;
@@ -30,7 +27,10 @@ public class ManagerTime : Singleton<ManagerTime>
     /// </summary>
     public void TimeEnd()
     {
+        needTimer = false;
+
         conTimerLevel.gameObject.SetActive(false);
+        ManagerMain.Instance.LevelLose(TypeLoseLevel.EndTimeLevel);
     }
 
     /// <summary>
@@ -49,6 +49,8 @@ public class ManagerTime : Singleton<ManagerTime>
     /// </summary>
     public void TimerStop()
     {
+        needTimer = false;
+        conTimerLevel.StopTimer();
         conTimerLevel.gameObject.SetActive(false);
     }
 }

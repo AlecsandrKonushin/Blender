@@ -12,6 +12,7 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
     [SerializeField] private GameObject settingsButton;
 
     private const string strLevel = "Уровень ";
+
     private float timeShowLevelText = 2f;
     private float timeHideResultPanel = .5f;
 

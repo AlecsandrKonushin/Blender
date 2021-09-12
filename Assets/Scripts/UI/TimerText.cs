@@ -6,9 +6,19 @@ public class TimerText : Singleton<TimerText>
 {
     [SerializeField] private Text textTime;
     
-    public void ShowTextTime(float value)
+    public void ShowTextTime(float value, bool warning = false)
     {
+        if (!textTime.gameObject.activeSelf)
+        {
+            textTime.gameObject.SetActive(true);
+        }
 
+        if (warning)
+        {
+            textTime.GetComponent<Animator>().SetTrigger("Warning");
+        }
+
+        textTime.text = value.ToString();
     }
 
     public void HideTextTime()
@@ -18,6 +28,8 @@ public class TimerText : Singleton<TimerText>
 
     private IEnumerator CoHideTextLevel()
     {
+        textTime.gameObject.GetComponent<Animator>().SetTrigger("Hide");
         yield return new WaitForSeconds(.5f);
+        textTime.gameObject.SetActive(false);
     }
 }
