@@ -26,12 +26,14 @@
     public void LevelNext()
     {
         ManagerLevel.Instance.NextLevel();
-        ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }
 
     public void LevelLose(TypeLoseLevel typeLoseLevel)
     {
         this.typeLoseLevel = typeLoseLevel;
+
+        ManagerTime.Instance.TimerStop();
+        TimerText.Instance.HideTextTime();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
         ManagerCanvaces.Instance.ShowLoseLevel();
     }

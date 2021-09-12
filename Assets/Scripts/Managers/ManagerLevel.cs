@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ManagerLevel : Singleton<ManagerLevel>
@@ -9,6 +10,8 @@ public class ManagerLevel : Singleton<ManagerLevel>
     private DataRecipe currentRecipe;
     private DataNeedFruit dataNeedFruit;
 
+    private float timeWaitNameLevel = 1.5f;
+
     public int SetCurrentNumberLevel { set => currentNumberLevel = value; }
 
     /// <summary>
@@ -16,12 +19,21 @@ public class ManagerLevel : Singleton<ManagerLevel>
     /// </summary>
     public void NextLevel()
     {
+        ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
+        StartCoroutine(CoWaitShowNameLevel());
+    }
+
+    private IEnumerator CoWaitShowNameLevel()
+    {
+        yield return new WaitForSeconds(timeWaitNameLevel);
+
         ManagerTime.Instance.StartNextLevel(levels[currentNumberLevel].TimeLevel);
         ManagerAudio.Instance.PlayMusicLevel();
-        ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
 
         StartRecipe();
         SetSpawnData();
+
+        ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }
 
     private void StartRecipe()

@@ -44,4 +44,9 @@ public class ConTimerLevel : MonoBehaviour
             }
         }
     }
+
+    public void StopTimer()
+    {
+        goTime = false;
+    }
 }
