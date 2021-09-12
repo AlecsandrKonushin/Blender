@@ -15,7 +15,13 @@ public class ConTimerLevel : MonoBehaviour
     {
         if (goTime)
         {
-            lastTime -= Time.deltaTime;            
+            lastTime -= Time.deltaTime;
+            
+            if(lastTime > 0)
+            {
+                убрать знаки после запятой
+                TimerText.Instance.ShowTextTime();
+            }
         }
     }
 }
