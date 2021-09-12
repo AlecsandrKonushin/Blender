@@ -117,7 +117,7 @@ public class ManagerLevel : Singleton<ManagerLevel>
     {
         if (damager.GetTypeDamager == TypeDamager.Tree)
         {
-            ManagerMain.Instance.LevelLose();
+            ManagerMain.Instance.LevelLose(TypeLoseLevel.DamagerTree);
         }
         else if (damager.GetTypeDamager == TypeDamager.Ice)
         {

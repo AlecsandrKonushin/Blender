@@ -1,5 +1,8 @@
 ﻿public class ManagerMain : Singleton<ManagerMain>
 {
+    private TypeLoseLevel typeLoseLevel;
+    public TypeLoseLevel GetTypeLoseLevel { get => typeLoseLevel; }
+
     private void Start()
     {
 #if !UNITY_EDITOR
@@ -26,8 +29,9 @@
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }
 
-    public void LevelLose()
+    public void LevelLose(TypeLoseLevel typeLoseLevel)
     {
+        this.typeLoseLevel = typeLoseLevel;
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
         ManagerCanvaces.Instance.ShowLoseLevel();
     }

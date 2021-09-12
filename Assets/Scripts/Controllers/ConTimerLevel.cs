@@ -4,6 +4,9 @@ public class ConTimerLevel : MonoBehaviour
 {
     private bool goTime = false;
     private float lastTime;
+    private float prevTime = 0;
+
+    private int warningValue = 5;
 
     public void SetTime(float time)
     {
@@ -16,11 +19,28 @@ public class ConTimerLevel : MonoBehaviour
         if (goTime)
         {
             lastTime -= Time.deltaTime;
-            
-            if(lastTime > 0)
+
+            if (lastTime > 0)
             {
-                убрать знаки после запятой
-                TimerText.Instance.ShowTextTime();
+                float time = Mathf.Floor(lastTime);
+
+                if (time != prevTime)
+                {
+                    prevTime = time;
+
+                    bool warning = false;
+                    if(time <= warningValue)
+                    {
+                        warning = true;
+                    }
+
+                    TimerText.Instance.ShowTextTime(time, warning);
+                }
+            }
+            else
+            {
+                TimerText.Instance.HideTextTime();
+                ManagerTime.Instance.TimeEnd();
             }
         }
     }

@@ -31,6 +31,7 @@ public class ManagerTime : Singleton<ManagerTime>
     public void TimeEnd()
     {
         conTimerLevel.gameObject.SetActive(false);
+        ManagerMain.Instance.LevelLose(TypeLoseLevel.EndTimeLevel);
     }
 
     /// <summary>

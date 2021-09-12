@@ -12,7 +12,9 @@ public class ResultPanel : MonoBehaviour
     private const float timeHide = 0.3f;
 
     private const string winText = "Победа!";
-    private const string loseText = "Проигрыш!";
+    private const string loseTextTree = "Проиграл. Деревья блендер не сможет порезать.";
+    private const string loseTextTime = "Проиграл. Время вышло.";
+    private const string loseTextTime2 = "Проиграл. Следи за счётчиком времени!";
 
     public void ShowWinPanel()
     {
@@ -25,11 +27,35 @@ public class ResultPanel : MonoBehaviour
 
     public void ShowLosePanel()
     {
-        textResult.text = loseText;
+        ChangeLoseText();
+
         nextLevelButton.SetActive(false);
         restartLevelButton.SetActive(true);
 
         background.SetActive(true);
+    }
+
+    private void ChangeLoseText()
+    {
+        TypeLoseLevel typeLose = ManagerMain.Instance.GetTypeLoseLevel;
+        string text = "";
+
+        if (typeLose == TypeLoseLevel.DamagerTree)
+        {
+            text = loseTextTree;
+        }
+        else if (typeLose == TypeLoseLevel.EndTimeLevel)
+        {
+            text = loseTextTime;
+        }
+
+        if(text == "")
+        {
+            Debug.LogError($"Не присвоено значение textResult. Тип проигыши {typeLose}");
+        }
+
+        textResult.text = text;
+
     }
 
     public void HidePanel()
