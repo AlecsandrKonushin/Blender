@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 5802308927256515509}
   - component: {fileID: 5802308927256515510}
   - component: {fileID: 5802308927256515512}
-  - component: {fileID: 3941072334795960637}
   - component: {fileID: 2362996629952143107}
+  - component: {fileID: 2679426977919939556}
   m_Layer: 0
   m_Name: Time 10
-  m_TagString: Damager
+  m_TagString: BonusTime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,27 +92,13 @@ Rigidbody:
   m_GameObject: {fileID: 5802308927256515514}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1.5
+  m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 2
   m_CollisionDetection: 0
---- !u!114 &3941072334795960637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5802308927256515514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf3af22e1b081247a58e3a710abf4c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundFall: {fileID: 8300000, guid: 4825a320b12acff4fbaa59035cb92843, type: 3}
-  typeDamager: 1
 --- !u!135 &2362996629952143107
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -126,6 +112,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2679426977919939556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802308927256515514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0b18515bcc5df4aba4fef59044a807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFall: {fileID: 0}
+  valueTime: 1
 --- !u!1001 &5531461082646436724
 PrefabInstance:
   m_ObjectHideFlags: 0

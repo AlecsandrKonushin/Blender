@@ -55,4 +55,10 @@ public class ManagerTime : Singleton<ManagerTime>
 
         TimerText.Instance.HideTextTime();
     }
+
+    public void AddTime(TypeBonusTime typeBonus)
+    {
+
+        Debug.Log("add time!!!!!!!!!!");
+    }
 }
