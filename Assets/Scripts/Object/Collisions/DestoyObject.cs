@@ -12,5 +12,9 @@ public class DestoyObject : MonoBehaviour
         {
             ManagerObjects.Instance.DestroyDamager(damager);
         }
+        else if (collision.gameObject.TryGetComponent<BonusTime>(out BonusTime bonusTime))
+        {
+            ManagerObjects.Instance.DestroyBonusTime(bonusTime);
+        }
     }
 }

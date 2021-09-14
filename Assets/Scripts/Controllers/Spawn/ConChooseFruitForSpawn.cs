@@ -5,6 +5,7 @@ public class ConChooseFruitForSpawn : MonoBehaviour
 {
     [SerializeField] private Fruit[] prefabFruit;
     [SerializeField] private Damager[] damagers;
+    [SerializeField] private BonusTime[] bonusesTime;
 
     private DataSpawnObjects dataSpawn;
 
@@ -33,7 +34,7 @@ public class ConChooseFruitForSpawn : MonoBehaviour
             {
                 foreach (var damager in damagers)
                 {
-                    if(damager.GetTypeDamager == (dataSpawnObj as DataSpawnDamager).TypeDamager)
+                    if (damager.GetTypeDamager == (dataSpawnObj as DataSpawnDamager).TypeDamager)
                     {
                         newObject = damager.gameObject;
                         break;
@@ -48,6 +49,16 @@ public class ConChooseFruitForSpawn : MonoBehaviour
                     {
                         newObject = prefab.gameObject;
                         break;
+                    }
+                }
+            }
+            else if (dataSpawnObj.TypeObject == TypeObject.BonusTime)
+            {
+                foreach (var bonusTime in bonusesTime)
+                {
+                    if(bonusTime.GetTypeBonusTime == (dataSpawnObj as DataSpawnBonusTime).TypeBonusTime)
+                    {
+                        newObject = bonusTime.gameObject;
                     }
                 }
             }

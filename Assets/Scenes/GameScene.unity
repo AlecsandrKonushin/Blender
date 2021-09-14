@@ -3667,7 +3667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &837927941
 Transform:
   m_ObjectHideFlags: 0
@@ -6422,6 +6422,9 @@ MonoBehaviour:
   damagers:
   - {fileID: 3941072334795960637, guid: 6b88872196a9c1c40b9f1f06ee5fef79, type: 3}
   - {fileID: 3941072334795960637, guid: bc3861306206aed4fb49b4918458fcdc, type: 3}
+  bonusesTime:
+  - {fileID: 2679426977919939556, guid: 09bac053211f2b64abeff42dcbd689a2, type: 3}
+  - {fileID: 4828387488620670129, guid: 7daf1e3f45d852840af3109122597f22, type: 3}
   objForSpawn: []
 --- !u!1 &1821781839
 GameObject:

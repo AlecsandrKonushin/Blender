@@ -39,6 +39,18 @@ public class BlenderFloorCollision : MonoBehaviour
                 Debug.LogError("Не найден компонент Damager на объекте " + collision.gameObject.name);
             }
         }
+        else if (tag == DataTags.BonusTime.ToString())
+        {
+            if (collision.gameObject.TryGetComponent<BonusTime>(out BonusTime bonusTime))
+            {
+                ManagerTime.Instance.AddTime(bonusTime.GetTypeBonusTime);
+                ManagerObjects.Instance.DestroyBonusTime(bonusTime);
+            }
+            else
+            {
+                Debug.LogError("Не найден компонент BonusTime на объекте " + collision.gameObject.name);
+            }
+        }
     }
 
     private bool CheckPositionCollision()

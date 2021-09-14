@@ -52,5 +52,13 @@ public class ManagerTime : Singleton<ManagerTime>
         needTimer = false;
         conTimerLevel.StopTimer();
         conTimerLevel.gameObject.SetActive(false);
+
+        TimerText.Instance.HideTextTime();
+    }
+
+    public void AddTime(TypeBonusTime typeBonus)
+    {
+
+        Debug.Log("add time!!!!!!!!!!");
     }
 }

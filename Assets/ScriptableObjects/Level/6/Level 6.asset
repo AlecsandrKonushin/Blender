@@ -15,3 +15,4 @@ MonoBehaviour:
   DataRecipe: {fileID: 11400000, guid: 4433d7ebd809e324ba16914ca28957f6, type: 2}
   DataSpawnObjects: {fileID: 11400000, guid: a8ec45e9135e87d4fbad7844513baca1, type: 2}
   TimeSpawn: 1.2
+  TimeLevel: 30

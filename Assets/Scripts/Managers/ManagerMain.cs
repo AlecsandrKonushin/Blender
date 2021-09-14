@@ -17,6 +17,7 @@
     /// </summary>
     public void LevelWin()
     {
+        ManagerTime.Instance.TimerStop();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
     }
 
@@ -33,7 +34,6 @@
         this.typeLoseLevel = typeLoseLevel;
 
         ManagerTime.Instance.TimerStop();
-        TimerText.Instance.HideTextTime();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
         ManagerCanvaces.Instance.ShowLoseLevel();
     }
@@ -42,7 +42,6 @@
     {
         ManagerObjects.Instance.DestroyAllObjects();
         ManagerLevel.Instance.NextLevel();
-        ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }
 
     /// <summary>
