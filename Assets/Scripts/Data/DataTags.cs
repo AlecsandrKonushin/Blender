@@ -1,5 +1,6 @@
 ﻿public enum DataTags 
 {
     Fruit,
-    Damager
+    Damager,
+    BonusTime
 }
