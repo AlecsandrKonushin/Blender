@@ -1,0 +1,13 @@
+buttonsMain_Start;Старт;Start
+buttonsMain_Options;Настройки;Options
+buttonsMain_Exit;Выход;Exit
+buttonsStart_Start;Продолжить;Continue
+buttonsStart_ResetLevelsButton;Начать Заново;Start again
+buttonsStart_BackButton;Назад;Back
+settingsPanel_PanelImage_ScoreBackgroundImage;Пройдено 1;Passed 1
+settingsPanel_PanelImage_MenuButton;В меню;In the menu
+resultPanel_Blackout_Background_ResultText;Победа!;Win!
+resultPanel_Blackout_Background_NextLevelButton;Следующий уровень;Next level
+resultPanel_Blackout_Background_RestartLevelButton;Заново;Again
+endLevelPanel_Blackout_Background_ResultText;Уровни кончились. Победа!;The levels are over. Victory!
+endLevelPanel_Blackout_Background_EndLevelButton;Выход;Exit
