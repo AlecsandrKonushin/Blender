@@ -4,7 +4,7 @@ public class ManagerTutorial : Singleton<ManagerTutorial>
 {
     [SerializeField] private TutorSwipeTap tutorSwipeTap;
 
-    private int[] levelsWithTutor = new int[5] { 0, 1, 2, 3, 4 };
+    private int[] levelsWithTutor = new int[4] { 0, 2, 3, 4 };
 
     public void CheckLevel(int number)
     {
