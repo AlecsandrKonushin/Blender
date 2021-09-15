@@ -16,14 +16,20 @@ public class ManagerCanvaces : Singleton<ManagerCanvaces>
     private float timeShowLevelText = 2f;
     private float timeHideResultPanel = .5f;
 
+    private bool showRecipe = true;
+    public bool SetShowRecipe { set => showRecipe = value; }
+
     /// <summary>
     /// Показать рецепт
     /// </summary>
     /// <param name="recipe"></param>
     public void ShowRecipe(DataNeedFruit dataFruit)
     {
-        recipePanel.ShowRecipe(dataFruit);
-        ShowSettingsButton();
+        if (showRecipe)
+        {
+            recipePanel.ShowRecipe(dataFruit);
+            ShowSettingsButton();
+        }
     }
 
     /// <summary>

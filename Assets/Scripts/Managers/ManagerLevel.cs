@@ -14,11 +14,15 @@ public class ManagerLevel : Singleton<ManagerLevel>
 
     public int SetCurrentNumberLevel { set => currentNumberLevel = value; }
 
+    private bool canCheckFruit = true;
+    public bool SetCanCheckFruit { set => canCheckFruit = value; }
+
     /// <summary>
     /// Init Следующего level
     /// </summary>
     public void NextLevel()
     {
+        ManagerTutorial.Instance.CheckLevel(currentNumberLevel);
         ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
         StartCoroutine(CoWaitShowNameLevel());
     }
@@ -93,17 +97,20 @@ public class ManagerLevel : Singleton<ManagerLevel>
     /// <param name="fruit"></param>
     public void CheckFruit(Fruit fruit)
     {
-        dataNeedFruit.ReduceFruit(fruit.GetTypeFruit);
-
-        ShowRecipe();
-
-        if (!dataNeedFruit.CheckHaveNeedFruit())
+        if (canCheckFruit)
         {
-            RecipeCollected();
+            dataNeedFruit.ReduceFruit(fruit.GetTypeFruit);
+
+            ShowRecipe();
+
+            if (!dataNeedFruit.CheckHaveNeedFruit())
+            {
+                RecipeCollected();
+            }
         }
     }
 
-    private void ShowRecipe()
+    public void ShowRecipe()
     {
         ManagerCanvaces.Instance.ShowRecipe(dataNeedFruit);
     }
