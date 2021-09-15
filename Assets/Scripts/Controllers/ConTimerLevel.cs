@@ -29,6 +29,7 @@ public class ConTimerLevel : MonoBehaviour
                     prevTime = time;
 
                     bool warning = false;
+
                     if(time <= warningValue)
                     {
                         warning = true;
@@ -48,5 +49,13 @@ public class ConTimerLevel : MonoBehaviour
     public void StopTimer()
     {
         goTime = false;
+    }
+
+    public void AddTime(float value)
+    {
+        lastTime += value;
+
+        float time = Mathf.Floor(lastTime);
+        TimerText.Instance.ShowTextTime(time, true);
     }
 }
