@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ManagerLevel : Singleton<ManagerLevel>
@@ -9,19 +10,34 @@ public class ManagerLevel : Singleton<ManagerLevel>
     private DataRecipe currentRecipe;
     private DataNeedFruit dataNeedFruit;
 
+    private float timeWaitNameLevel = 1.5f;
+
     public int SetCurrentNumberLevel { set => currentNumberLevel = value; }
+
+    private bool canCheckFruit = true;
+    public bool SetCanCheckFruit { set => canCheckFruit = value; }
 
     /// <summary>
     /// Init Следующего level
     /// </summary>
     public void NextLevel()
     {
+        ManagerTutorial.Instance.CheckLevel(currentNumberLevel);
+        ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
+        StartCoroutine(CoWaitShowNameLevel());
+    }
+
+    private IEnumerator CoWaitShowNameLevel()
+    {
+        yield return new WaitForSeconds(timeWaitNameLevel);
+
         ManagerTime.Instance.StartNextLevel(levels[currentNumberLevel].TimeLevel);
         ManagerAudio.Instance.PlayMusicLevel();
-        ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
 
         StartRecipe();
         SetSpawnData();
+
+        ManagerStates.Instance.ChangeStateGame(TypeStateGame.Game);
     }
 
     private void StartRecipe()
@@ -81,17 +97,20 @@ public class ManagerLevel : Singleton<ManagerLevel>
     /// <param name="fruit"></param>
     public void CheckFruit(Fruit fruit)
     {
-        dataNeedFruit.ReduceFruit(fruit.GetTypeFruit);
-
-        ShowRecipe();
-
-        if (!dataNeedFruit.CheckHaveNeedFruit())
+        if (canCheckFruit)
         {
-            RecipeCollected();
+            dataNeedFruit.ReduceFruit(fruit.GetTypeFruit);
+
+            ShowRecipe();
+
+            if (!dataNeedFruit.CheckHaveNeedFruit())
+            {
+                RecipeCollected();
+            }
         }
     }
 
-    private void ShowRecipe()
+    public void ShowRecipe()
     {
         ManagerCanvaces.Instance.ShowRecipe(dataNeedFruit);
     }
@@ -117,7 +136,7 @@ public class ManagerLevel : Singleton<ManagerLevel>
     {
         if (damager.GetTypeDamager == TypeDamager.Tree)
         {
-            ManagerMain.Instance.LevelLose();
+            ManagerMain.Instance.LevelLose(TypeLoseLevel.DamagerTree);
         }
         else if (damager.GetTypeDamager == TypeDamager.Ice)
         {

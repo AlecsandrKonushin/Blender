@@ -5,6 +5,7 @@ public class ManagerObjects : Singleton<ManagerObjects>
 {
     private List<Fruit> fruits = new List<Fruit>();
     private List<Damager> damagers = new List<Damager>();
+    private List<BonusTime> bonusesTime = new List<BonusTime>();
 
     public void AddFruit(Fruit fruit)
     {
@@ -14,6 +15,11 @@ public class ManagerObjects : Singleton<ManagerObjects>
     public void AddDamager(Damager damager)
     {
         damagers.Add(damager);
+    }
+
+    public void AddBonusTime(BonusTime bonusTime)
+    {
+        bonusesTime.Add(bonusTime);
     }
 
     /// <summary>
@@ -36,6 +42,14 @@ public class ManagerObjects : Singleton<ManagerObjects>
                 damager.gameObject.SetActive(false);
             }
         }
+
+        if(bonusesTime.Count > 0)
+        {
+            foreach (var bonusTime in bonusesTime)
+            {
+                bonusTime.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void GoFruits()
@@ -55,6 +69,14 @@ public class ManagerObjects : Singleton<ManagerObjects>
                 damager.gameObject.SetActive(true);
             }
         }
+
+        if (bonusesTime.Count > 0)
+        {
+            foreach (var bonusTime in bonusesTime)
+            {
+                bonusTime.gameObject.SetActive(true);
+            }
+        }
     }
 
     /// <summary>
@@ -71,6 +93,12 @@ public class ManagerObjects : Singleton<ManagerObjects>
     {
         damagers.Remove(damager);
         damager.DestoyMe();
+    }
+
+    public void DestroyBonusTime(BonusTime bonusTime)
+    {
+        bonusesTime.Remove(bonusTime);
+        bonusTime.DestoyMe();
     }
 
     /// <summary>
@@ -101,5 +129,17 @@ public class ManagerObjects : Singleton<ManagerObjects>
         }
 
         damagers.Clear();
+
+        if (bonusesTime.Count > 0)
+        {
+            for (int i = 0; i < bonusesTime.Count; i++)
+            {
+                BonusTime bonusTime = bonusesTime[i];
+                bonusesTime[i] = null;
+                bonusTime.DestoyMe();
+            }
+        }
+
+        bonusesTime.Clear();
     }
 }
