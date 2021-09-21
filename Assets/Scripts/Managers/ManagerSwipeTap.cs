@@ -10,6 +10,9 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
 
     [SerializeField] private ConSwipeTap conSwipeTap;
 
+    private bool canSwipe = true;
+    private bool canTap = true;
+
     private int numberLineTap = 0;
 
     /// <summary>
@@ -18,6 +21,11 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
     /// <param name="right"></param>
     public void DoSwipe(bool right)
     {
+        if(!canSwipe)
+        {
+            return;
+        }
+
         if (right)
         {
             numberLineTap++;
@@ -36,6 +44,11 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
     /// <param name="swipeByNumberLine"></param>
     public void DoTap(int swipeByNumberLine)
     {
+        if (!canTap)
+        {
+            return;
+        }
+
         if (numberLineTap != swipeByNumberLine)
         {
             numberLineTap = swipeByNumberLine;
@@ -65,4 +78,22 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
     {
         conSwipeTap.gameObject.SetActive(false);
     }
+
+    #region Tutorial
+    public void TutorSwipe()
+    {
+        canTap = false;
+    }
+
+    public void EndTutorSwipe()
+    {
+        canTap = true;
+        canSwipe = false;
+    }
+
+    public void EndTutorTap()
+    {
+        canSwipe = true;
+    }
+    #endregion
 }

@@ -58,7 +58,16 @@ public class ManagerTime : Singleton<ManagerTime>
 
     public void AddTime(TypeBonusTime typeBonus)
     {
+        float time = 0;
 
-        Debug.Log("add time!!!!!!!!!!");
+        if(typeBonus == TypeBonusTime.Small)
+        {
+            time = 5;
+        }else if(typeBonus == TypeBonusTime.Big)
+        {
+            time = 10;
+        }
+
+        conTimerLevel.AddTime(time);
     }
 }
