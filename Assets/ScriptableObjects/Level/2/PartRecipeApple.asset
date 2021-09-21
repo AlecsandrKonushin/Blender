@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PartRecipeApple
   m_EditorClassIdentifier: 
   TypeFruit: 0
-  CountFruit: 5
+  CountFruit: 4
