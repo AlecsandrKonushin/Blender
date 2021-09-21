@@ -17,12 +17,28 @@ public class ManagerLevel : Singleton<ManagerLevel>
     private bool canCheckFruit = true;
     public bool SetCanCheckFruit { set => canCheckFruit = value; }
 
+    private bool waitTutor = false;
+    public bool SetWaitTutor { set => waitTutor = value; }
+
     /// <summary>
     /// Init Следующего level
     /// </summary>
     public void NextLevel()
     {
+        waitTutor = false;
+
         ManagerTutorial.Instance.CheckLevel(currentNumberLevel);
+
+        if (!waitTutor)
+        {
+            ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
+            StartCoroutine(CoWaitShowNameLevel());
+        }
+    }
+
+    public void TutorEnd()
+    {
+        waitTutor = false;
         ManagerCanvaces.Instance.ShowLevelText(currentNumberLevel + 1);
         StartCoroutine(CoWaitShowNameLevel());
     }

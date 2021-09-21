@@ -8,6 +8,11 @@ public class ConSpawnTimer : MonoBehaviour
     public bool TimeGo { set; private get; }
     public bool SpawnNow { set; private get; }
 
+    private void Start()
+    {
+        TimeGo = false;
+    }
+
     private void Update()
     {
         if (TimeGo && !SpawnNow)
