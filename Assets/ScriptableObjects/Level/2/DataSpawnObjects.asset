@@ -15,3 +15,4 @@ MonoBehaviour:
   DataSpawn:
   - {fileID: 11400000, guid: be3b44aaf03cc1f40b915514f140d3d5, type: 2}
   - {fileID: 11400000, guid: 9945dc8a6203be04faa5bdc1d8c461b2, type: 2}
+  - {fileID: 11400000, guid: d78b5917161c95d47a880c78939ef181, type: 2}

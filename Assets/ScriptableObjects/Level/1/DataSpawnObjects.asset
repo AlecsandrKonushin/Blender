@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataSpawn:
   - {fileID: 11400000, guid: 6012adeb865bcf9489d4d1036f2e14a1, type: 2}
+  - {fileID: 11400000, guid: d78b5917161c95d47a880c78939ef181, type: 2}

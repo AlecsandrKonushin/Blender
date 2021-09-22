@@ -1,5 +1,6 @@
 ﻿public enum TypeObject
 {
     Fruit,
-    Damager
+    Damager,
+    BonusTime
 }
