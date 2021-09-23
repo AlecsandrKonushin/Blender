@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ff86c2c6e2bd6894bac260e0c681ea05
+=======
+guid: 51f452eeb78cb95458f2fd07fbdb992d
+>>>>>>> 3Dmodels
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
