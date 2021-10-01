@@ -28,7 +28,7 @@ public class TutorSwipeTap : MonoBehaviour
     {
         countSwipe++;
 
-        if(countSwipe > 1)
+        if(countSwipe > 0)
         {
             swipeHand.SetActive(false);
         }
@@ -44,7 +44,7 @@ public class TutorSwipeTap : MonoBehaviour
     {
         countTap++;
 
-        if(countTap > 1)
+        if(countTap > 0)
         {
             tapHand.SetActive(false);
         }
