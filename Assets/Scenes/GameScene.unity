@@ -5038,6 +5038,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smooth_blender_new
       objectReference: {fileID: 0}
+    - target: {fileID: 3965458288179457397, guid: e7e9694fb61e1f64db3f10f9b56b68f8,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3965458288179457397, guid: e7e9694fb61e1f64db3f10f9b56b68f8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b278767e60fb3934a8893f8fe87371b6, type: 2}
+    - target: {fileID: 8773875363266044584, guid: e7e9694fb61e1f64db3f10f9b56b68f8,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773875363266044584, guid: e7e9694fb61e1f64db3f10f9b56b68f8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa62e50bc6d72714884f74ab09e5c23d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7e9694fb61e1f64db3f10f9b56b68f8, type: 3}
 --- !u!224 &1132685914 stripped
@@ -5331,7 +5351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43876824, g: 0.5309233, b: 0.6415094, a: 1}
+  m_Color: {r: 0.45759168, g: 0.63491225, b: 0.8584906, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
