@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class TutorDanger : MonoBehaviour
 {
-    private string textDanderTree = "Дерево опасно";
-    private string textDanderIce = "Лёд замораживает";
+    private string textDanderTree = "Дерево опасно!";
+    private string textDanderIce = "Лёд замораживает!";
+    private string textDanderTime = "Следи за временем, что бы успеть!";
+    private string textDanderBonusTime = "Собирай бонусы время, что бы успеть!";
 
     public void StartTutor(BubbleType bubbleType)
     {
@@ -15,6 +17,14 @@ public class TutorDanger : MonoBehaviour
         else if (bubbleType == BubbleType.Ice)
         {
             BubbleTutor.Instance.ShowTutor(bubbleType, textDanderIce);
+        }
+        else if (bubbleType == BubbleType.Time)
+        {
+            BubbleTutor.Instance.ShowTutor(bubbleType, textDanderTime);
+        }
+        else if (bubbleType == BubbleType.BonusTime)
+        {
+            BubbleTutor.Instance.ShowTutor(bubbleType, textDanderBonusTime);
         }
     }
 
@@ -34,5 +44,7 @@ public class TutorDanger : MonoBehaviour
 public enum BubbleType
 {
     Tree,
-    Ice
+    Ice,
+    Time,
+    BonusTime
 }

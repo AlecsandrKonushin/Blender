@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpawnFruit_Apple
   m_EditorClassIdentifier: 
   TypeObject: 0
-  ProcentRandom: 25
+  ProcentRandom: 23
   DragObject: 0.8
   TypeFruit: 0

@@ -5,7 +5,7 @@ public class ManagerTutorial : Singleton<ManagerTutorial>
     [SerializeField] private TutorSwipeTap tutorSwipeTap;
     [SerializeField] private TutorDanger tutorDanger;
 
-    private int[] levelsWithTutor = new int[4] { 0, 2, 4, 6 };
+    private int[] levelsWithTutor = new int[5] { 0, 2, 4, 5, 6 };
 
     public void CheckLevel(int number)
     {
@@ -33,6 +33,16 @@ public class ManagerTutorial : Singleton<ManagerTutorial>
         {
             SetWaitTutor();
             tutorDanger.StartTutor(BubbleType.Ice);
+        }
+        else if (number == 5)
+        {
+            SetWaitTutor();
+            tutorDanger.StartTutor(BubbleType.Time);
+        }
+        else if (number == 6)
+        {
+            SetWaitTutor();
+            tutorDanger.StartTutor(BubbleType.BonusTime);
         }
     }
 
