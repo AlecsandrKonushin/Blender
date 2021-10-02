@@ -88,10 +88,6 @@ public class ManagerAudio : DontDestroySingleton<ManagerAudio>
         {
             StartCoroutine(CoPlayMusic(clip));
         }
-        else
-        {
-            StartCoroutine(CoChangeAudio(clip));
-        }
     }
 
     private IEnumerator CoChangeAudio(AudioClip clip)
