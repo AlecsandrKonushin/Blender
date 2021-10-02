@@ -1,4 +1,6 @@
-﻿public class ManagerStates : Singleton<ManagerStates>
+﻿using UnityEngine;
+
+public class ManagerStates : Singleton<ManagerStates>
 {
     public void ChangeStateGame(TypeStateGame stateGame)
     {

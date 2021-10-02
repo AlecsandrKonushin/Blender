@@ -49,8 +49,6 @@ public class ManagerTime : Singleton<ManagerTime>
     /// </summary>
     public void TimerStop()
     {
-        needTimer = false;
-        conTimerLevel.StopTimer();
         conTimerLevel.gameObject.SetActive(false);
 
         TimerText.Instance.HideTextTime();
