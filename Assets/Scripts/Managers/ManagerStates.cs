@@ -20,7 +20,7 @@
 
     private void ChangeCanSwipe(bool canSwipe)
     {
-        ManagerSwipeTap.Instance.ChangeCanSwipe(canSwipe);
+        ManagerSwipeTap.Instance.ChangeCanSwipeTap(canSwipe);
     }
 
     private void ChangeCanSpawnFruit(bool canSpawn)

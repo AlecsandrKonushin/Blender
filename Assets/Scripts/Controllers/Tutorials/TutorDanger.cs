@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class TutorDanger : MonoBehaviour
 {
@@ -15,6 +16,18 @@ public class TutorDanger : MonoBehaviour
         {
             BubbleTutor.Instance.ShowTutor(bubbleType, textDanderIce);
         }
+    }
+
+    public void EndTutor()
+    {
+        BubbleTutor.Instance.HideTutor();
+        StartCoroutine(CoWaitEndTutor());
+    }
+
+    private IEnumerator CoWaitEndTutor()
+    {
+        yield return new WaitForSeconds(.3f);
+        ManagerLevel.Instance.TutorEnd();
     }
 }
 

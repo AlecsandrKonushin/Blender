@@ -8,8 +8,8 @@ public class TutorSwipeTap : MonoBehaviour
     private int countSwipe = 0;
     private int countTap = 0;
 
-    private int maxSwipe = 4;
-    private int maxTap = 4;
+    private int maxSwipe = 3;
+    private int maxTap = 3;
 
     public void StartTutor()
     {

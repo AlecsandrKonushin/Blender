@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class BubbleTutor : Singleton<BubbleTutor>
@@ -21,5 +22,17 @@ public class BubbleTutor : Singleton<BubbleTutor>
 
         textTutor.text = text;
         background.SetActive(true);
+    }
+
+    public void HideTutor()
+    {
+        StartCoroutine(CoHideTutor());
+    }
+
+    private IEnumerator CoHideTutor()
+    {
+        background.GetComponent<Animator>().SetTrigger("Hide");
+        yield return new WaitForSeconds(.3f);
+        background.SetActive(false);
     }
 }

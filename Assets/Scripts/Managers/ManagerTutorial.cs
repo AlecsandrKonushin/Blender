@@ -3,9 +3,9 @@
 public class ManagerTutorial : Singleton<ManagerTutorial>
 {
     [SerializeField] private TutorSwipeTap tutorSwipeTap;
-    [SerializeField] private TutorDanger tutorDangerTree;
+    [SerializeField] private TutorDanger tutorDanger;
 
-    private int[] levelsWithTutor = new int[4] { 0, 2, 3, 4 };
+    private int[] levelsWithTutor = new int[4] { 0, 2, 4, 6 };
 
     public void CheckLevel(int number)
     {
@@ -27,7 +27,12 @@ public class ManagerTutorial : Singleton<ManagerTutorial>
         else if (number == 2)
         {
             SetWaitTutor();
-            tutorDangerTree.StartTutor(BubbleType.Tree);
+            tutorDanger.StartTutor(BubbleType.Tree);
+        }
+        else if (number == 4)
+        {
+            SetWaitTutor();
+            tutorDanger.StartTutor(BubbleType.Ice);
         }
     }
 

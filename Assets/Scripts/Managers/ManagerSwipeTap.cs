@@ -61,22 +61,24 @@ public class ManagerSwipeTap : Singleton<ManagerSwipeTap>
     /// если нет, то он отключается
     /// </summary>
     /// <param name="canSwipe"></param>
-    public void ChangeCanSwipe(bool canSwipe)
+    public void ChangeCanSwipeTap(bool canSwipe)
     {
         if (canSwipe)
-            OnConSwipe();
+            OnConSwipeTap();
         else
-            OffConSwipe();
+            OffConSwipeTap();
     }
 
-    private void OnConSwipe()
+    private void OnConSwipeTap()
     {
         conSwipeTap.gameObject.SetActive(true);
+        canTap = true;
     }
 
-    private void OffConSwipe()
+    private void OffConSwipeTap()
     {
         conSwipeTap.gameObject.SetActive(false);
+        canTap = false;
     }
 
     #region Tutorial

@@ -9,7 +9,7 @@ public class ManagerFreeze : Singleton<ManagerFreeze>
 
     public void FreezeBlender()
     {
-        ManagerSwipeTap.Instance.ChangeCanSwipe(false);
+        ManagerSwipeTap.Instance.ChangeCanSwipeTap(false);
         blender.Freeze();
         ConCamera.Instance.FrostCamera();
 
@@ -20,7 +20,7 @@ public class ManagerFreeze : Singleton<ManagerFreeze>
     {
         yield return new WaitForSeconds(timeFreeze);
 
-        ManagerSwipeTap.Instance.ChangeCanSwipe(true);
+        ManagerSwipeTap.Instance.ChangeCanSwipeTap(true);
         blender.EndFreeze();
         ConCamera.Instance.UnFrostCamera();
     }
