@@ -2737,7 +2737,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4584d1db56b66c448ecbc1047bfb950, type: 2}
   - {fileID: 11400000, guid: 85e364d6a3149014ba52f8abd44de1c7, type: 2}
   - {fileID: 11400000, guid: 2a56eea3c4585a14d8d547172dcb5507, type: 2}
-  currentNumberLevel: 5
+  currentNumberLevel: 0
 --- !u!1 &472530345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,7 +2782,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1079.9999, y: 300}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &472530347
 MonoBehaviour:
@@ -3732,7 +3732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &636080594
 Transform:
   m_ObjectHideFlags: 0
@@ -3741,8 +3741,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636080593}
   m_LocalRotation: {x: -0.54493636, y: -0.57345706, z: -0.37333727, w: 0.48457274}
-  m_LocalPosition: {x: -2.52, y: -7, z: -2.79}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -1, y: -6, z: -2.79}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 15853887}
   m_RootOrder: 0
@@ -4616,7 +4616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &837927941
 Transform:
   m_ObjectHideFlags: 0
@@ -6423,13 +6423,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388620097}
-  m_LocalRotation: {x: -0.58912265, y: 0.57369727, z: -0.56798357, w: -0.034651734}
+  m_LocalRotation: {x: -0.5785633, y: 0.5045334, z: -0.577621, w: -0.27760515}
   m_LocalPosition: {x: -2.31, y: 2.22, z: -1}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 15853887}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 43.831, y: 119.241005, z: -118.060005}
+  m_LocalEulerAnglesHint: {x: 64.7, y: 114.7, z: -142}
 --- !u!65 &1388620099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6489,7 +6489,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388620097}
-  m_Mesh: {fileID: 4493585093827132993, guid: eeacb03ecf3ab39449aa8f0fde6063bd, type: 3}
+  m_Mesh: {fileID: 4493585093827132993, guid: f81005cedf7f2694e970d1c6c93f5611, type: 3}
 --- !u!95 &1388620102
 Animator:
   serializedVersion: 3
