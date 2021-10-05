@@ -5,10 +5,11 @@ public class EffectSlicing : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particleObject;
     [SerializeField] private ParticleSystem particleObject2;
-    [SerializeField] private Color green;
-    [SerializeField] private Color yellow;
-    [SerializeField] private Color orange;
-    [SerializeField] private Color red;
+    [SerializeField] private Material materialParticle;
+    [SerializeField] private Texture2D green;
+    [SerializeField] private Texture2D yellow;
+    [SerializeField] private Texture2D orange;
+    [SerializeField] private Texture2D red;
 
     [SerializeField] private float timeEffect;
 
@@ -25,34 +26,32 @@ public class EffectSlicing : MonoBehaviour
 
     public void ShowSliceFruit(Fruit fruit)
     {
-        Color color = green;
+        materialParticle.mainTexture = green;
 
         if (fruit.GetTypeColor == TypeColor.Green)
         {
-            color = green;
+            materialParticle.mainTexture = green;
         }
         else if (fruit.GetTypeColor == TypeColor.Yellow)
         {
-            color = yellow;
+            materialParticle.mainTexture = yellow;
         }
         else if (fruit.GetTypeColor == TypeColor.Orange)
         {
-            color = orange;
+            materialParticle.mainTexture = orange;
         }
 
         else if (fruit.GetTypeColor == TypeColor.Red)
         {
-            color = red;
+            materialParticle.mainTexture = red;
         }
 
         if (particleObject.gameObject.activeSelf)
         {
-            particle2.startColor = color;
             StartCoroutine(CoShowEffect(particleObject2.gameObject));
         }
         else
-        {            
-            particle.startColor = color;
+        {
             StartCoroutine(CoShowEffect(particleObject.gameObject));
         }
 
