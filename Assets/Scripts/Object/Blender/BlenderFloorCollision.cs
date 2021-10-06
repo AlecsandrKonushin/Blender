@@ -3,6 +3,7 @@
 public class BlenderFloorCollision : MonoBehaviour
 {
     [SerializeField] private EffectSlicing effectSlicing;
+    [SerializeField] private BlenderAnimation blenderAnimation;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,6 +22,7 @@ public class BlenderFloorCollision : MonoBehaviour
 
                 ManagerLevel.Instance.CheckFruit(fruit);
                 ManagerObjects.Instance.DestroyFruit(fruit);
+                blenderAnimation.CutFruit();
             }
             else
             {

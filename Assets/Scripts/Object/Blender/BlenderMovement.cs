@@ -6,6 +6,7 @@ public class BlenderMovement : ObjectMovement
     public event EndMove AfterEndMove;
 
     [SerializeField] private float[] positions;
+    [SerializeField] private BlenderAnimation blenderAnimation;
 
     private int numberCurrentLine;
 
@@ -22,6 +23,7 @@ public class BlenderMovement : ObjectMovement
             if(numberCurrentLine < positions.Length - 1)
             {
                 numberCurrentLine++;
+                blenderAnimation.SwipeRight();
             }
             else
             {
@@ -33,6 +35,7 @@ public class BlenderMovement : ObjectMovement
             if(numberCurrentLine > 0)
             {
                 numberCurrentLine--;
+                blenderAnimation.SwipeLeft();
             }
             else
             {
@@ -53,6 +56,7 @@ public class BlenderMovement : ObjectMovement
 
     protected override void AfterMove()
     {
+        blenderAnimation.StopSwipe();
         AfterEndMove?.Invoke();
     }
 }
