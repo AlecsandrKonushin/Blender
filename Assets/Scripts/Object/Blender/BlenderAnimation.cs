@@ -14,13 +14,11 @@ public class BlenderAnimation : MonoBehaviour
 
     public void SwipeRight()
     {
-        animator.SetTrigger("SwipeRight");
         right = true;
     }
 
     public void SwipeLeft()
     {
-        animator.SetTrigger("SwipeLeft");
         right = false;
     }
 
