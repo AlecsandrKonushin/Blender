@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BonusTime
   m_EditorClassIdentifier: 
   TypeObject: 2
-  ProcentRandom: 0
-  DragObject: 2
+  ProcentRandom: 10
+  DragObject: 0.8
   TypeBonusTime: 0

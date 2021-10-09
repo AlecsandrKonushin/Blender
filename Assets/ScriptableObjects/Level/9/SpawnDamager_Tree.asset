@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TypeObject: 1
   ProcentRandom: 30
-  DragObject: 0.7
+  DragObject: 0.6
   TypeDamager: 0
