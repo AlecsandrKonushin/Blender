@@ -963,6 +963,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6889566490430003840, guid: caad3d63898e7b14eab40894b3f835e3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08140234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889566490430003840, guid: caad3d63898e7b14eab40894b3f835e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.32562
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889566490430003840, guid: caad3d63898e7b14eab40894b3f835e3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000001458288
+      objectReference: {fileID: 0}
     - target: {fileID: 9080659986588090786, guid: caad3d63898e7b14eab40894b3f835e3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1152,6 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508360fc47f892449b8a8c8cd48e5e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blenderAnimation: {fileID: 162912279}
 --- !u!1 &149005998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blender: {fileID: 750775310}
+  effectsDamageBlender:
+  - {fileID: 1868541563}
+  - {fileID: 927766072}
 --- !u!23 &162912280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1411,6 +1430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a3c8a58a51ea64ca5627b3f5692757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blenderAnimation: {fileID: 162912279}
   soundBlender:
   - {fileID: 8300000, guid: 9ea7af92311391e44a8abc27903b215f, type: 3}
   - {fileID: 8300000, guid: 7a0ab56a5ce282d438d1df9c7f1bd3bb, type: 3}
@@ -2767,7 +2787,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4584d1db56b66c448ecbc1047bfb950, type: 2}
   - {fileID: 11400000, guid: 85e364d6a3149014ba52f8abd44de1c7, type: 2}
   - {fileID: 11400000, guid: 2a56eea3c4585a14d8d547172dcb5507, type: 2}
-  currentNumberLevel: 0
+  currentNumberLevel: 6
 --- !u!1 &472530345
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,6 +4906,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &927766072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4918311126157986363, guid: be1f8c9f1f320c14ea915d4bed246611,
+    type: 3}
+  m_PrefabInstance: {fileID: 1707081867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935593303
 GameObject:
   m_ObjectHideFlags: 0
@@ -8452,6 +8478,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 566809155350427576, guid: 54153f71d0b638848805429d64ab4ea2,
     type: 3}
   m_PrefabInstance: {fileID: 449018380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1868541563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3870167854632093749, guid: 51b8de45b053805409749d3b5bd6b0b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1987763100}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1920568019
 GameObject:

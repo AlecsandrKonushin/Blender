@@ -1,5 +1,10 @@
-﻿public class ManagerMain : Singleton<ManagerMain>
+﻿using System.Collections;
+using UnityEngine;
+
+public class ManagerMain : Singleton<ManagerMain>
 {
+    [SerializeField] private BlenderAnimation blenderAnimation;
+
     private TypeLoseLevel typeLoseLevel;
     public TypeLoseLevel GetTypeLoseLevel { get => typeLoseLevel; }
 
@@ -35,6 +40,14 @@
 
         ManagerTime.Instance.TimerStop();
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
+
+        StartCoroutine(CoWaitBeforeShowUI());
+    }
+
+    private IEnumerator CoWaitBeforeShowUI()
+    {
+        yield return new WaitForSeconds(1f);
+
         ManagerCanvaces.Instance.ShowLoseLevel();
     }
 
@@ -42,6 +55,11 @@
     {
         ManagerObjects.Instance.DestroyAllObjects();
         ManagerLevel.Instance.NextLevel();
+
+        if (blenderAnimation.GetDamage)
+        {
+            blenderAnimation.Work();
+        }
     }
 
     /// <summary>

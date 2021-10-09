@@ -3,6 +3,7 @@
 [RequireComponent(typeof(BlenderMovement))]
 public class Blender : MonoBehaviour
 {
+    [SerializeField] private BlenderAnimation blenderAnimation;
     [SerializeField] private AudioClip[] soundBlender;
     private int countSound = 0;
 
@@ -26,12 +27,11 @@ public class Blender : MonoBehaviour
     /// </summary>
     public void Freeze()
     {
-
     }
 
     public void EndFreeze()
     {
-
+        blenderAnimation.Work();
     }
 
     private void MoveToLine(int numberLine)

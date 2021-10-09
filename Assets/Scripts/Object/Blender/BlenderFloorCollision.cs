@@ -33,6 +33,15 @@ public class BlenderFloorCollision : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent<Damager>(out Damager damager))
             {
+                if (damager.GetTypeDamager == TypeDamager.Ice)
+                {
+                    blenderAnimation.FreezeBlender();
+                }
+                else if (damager.GetTypeDamager == TypeDamager.Tree)
+                {
+                    blenderAnimation.EffectDamageBlender();
+                }
+
                 ManagerLevel.Instance.CheckDamager(damager);
                 ManagerObjects.Instance.DestroyDamager(damager);
             }
