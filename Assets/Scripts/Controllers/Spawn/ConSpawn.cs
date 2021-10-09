@@ -22,5 +22,9 @@ public class ConSpawn : MonoBehaviour
         {
             ManagerObjects.Instance.AddDamager(damager);
         }
+        else if (newObj.TryGetComponent<BonusTime>(out BonusTime bonusTime))
+        {
+            ManagerObjects.Instance.AddBonusTime(bonusTime);
+        }
     }
 }
