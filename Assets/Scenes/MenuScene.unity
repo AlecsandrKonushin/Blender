@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73386dba73efec44a548df62249d0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameScene: 0
 --- !u!4 &46515580
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,7 +1652,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847031179}
   m_LocalRotation: {x: 0.17568503, y: -0.7689288, z: 0.60687906, w: -0.097883284}
-  m_LocalPosition: {x: 0, y: 0, z: 84}
+  m_LocalPosition: {x: 0, y: 0, z: 80}
   m_LocalScale: {x: 1, y: 1, z: 1.2564}
   m_Children: []
   m_Father: {fileID: 678106588}
@@ -1659,7 +1660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 64.014, y: 123.87701, z: 297.404}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -654, y: 1334}
+  m_AnchoredPosition: {x: -603, y: 1355}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!199 &847031181
@@ -1978,7 +1979,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 13
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3174,7 +3175,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: dcb200c06964b5246905c82a9cd3d980, type: 3}
+    - sprite: {fileID: 21300000, guid: 832e50fa06aa0c14b9852a86a9c40b84, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -3877,7 +3878,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4.75
+      scalar: 1.24
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3930,7 +3931,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.8
+      scalar: 3.21
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -7642,7 +7643,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767074042}
   m_LocalRotation: {x: 0.633339, y: 0.22809322, z: -0.48046905, w: 0.562143}
-  m_LocalPosition: {x: 0, y: 0, z: -17}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1.2564}
   m_Children: []
   m_Father: {fileID: 678106588}
@@ -7650,7 +7651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 68.629005, y: 284.901, z: 223.59099}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 494, y: 1282}
+  m_AnchoredPosition: {x: 528, y: 1292}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!199 &1767074044
@@ -7969,7 +7970,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 13
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9165,7 +9166,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: bf672e6c466ec344ca444b43836c669f, type: 3}
+    - sprite: {fileID: 21300000, guid: cb7228342a2e5654ea86c7831cb92911, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -9868,7 +9869,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.71
+      scalar: 1.58
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -12535,7 +12536,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -953404263
+  m_SortingLayerID: -1401251161
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1952896985
