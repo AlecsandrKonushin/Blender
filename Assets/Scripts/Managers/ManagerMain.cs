@@ -4,6 +4,7 @@ using UnityEngine;
 public class ManagerMain : Singleton<ManagerMain>
 {
     [SerializeField] private BlenderAnimation blenderAnimation;
+    [SerializeField] private GameObject collidersBlender;
 
     private TypeLoseLevel typeLoseLevel;
     public TypeLoseLevel GetTypeLoseLevel { get => typeLoseLevel; }
@@ -69,6 +70,7 @@ public class ManagerMain : Singleton<ManagerMain>
     {
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
 
+        collidersBlender.SetActive(false);
         ManagerSpawner.Instance.EndGame();
         StartCoroutine(CoWaitEndGame());
     }

@@ -1168,6 +1168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blenderAnimation: {fileID: 162912279}
+  collidersBlender: {fileID: 1615794470}
 --- !u!1 &149005998
 GameObject:
   m_ObjectHideFlags: 0

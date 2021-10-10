@@ -133,7 +133,6 @@ public class ManagerLevel : Singleton<ManagerLevel>
 
     private void RecipeCollected()
     {
-        ManagerCanvaces.Instance.ShowWinLevel();
         currentNumberLevel++;
 
         if (currentNumberLevel >= levels.Length)
@@ -142,6 +141,8 @@ public class ManagerLevel : Singleton<ManagerLevel>
         }
         else
         {
+            ManagerCanvaces.Instance.ShowWinLevel();
+
             ManagerSaveLoad.Instance.SaveLevel(currentNumberLevel);
 
             ManagerMain.Instance.LevelWin();

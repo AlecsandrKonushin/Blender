@@ -37,7 +37,7 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
     /// </summary>
     public void TimeForSpawn()
     {
-        if(countBeforeDoubleSpawn > 0)
+        if (countBeforeDoubleSpawn > 0)
         {
             countBeforeDoubleSpawn--;
 
@@ -45,7 +45,7 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
         }
         else
         {
-            if(countBeforeTripleSpawn > 0)
+            if (countBeforeTripleSpawn > 0)
             {
                 countBeforeTripleSpawn--;
                 DoubleSpawn();
@@ -75,7 +75,7 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
 
     private IEnumerator CoSpawnFruits()
     {
-        for (int i = 0; i < 70; i++)
+        while (true)
         {
             yield return new WaitForSeconds(.05f);
             CreateObject();
