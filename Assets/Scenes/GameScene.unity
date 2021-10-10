@@ -2790,7 +2790,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d88cdf4fcf198b44bfcbac3ef257c6c, type: 2}
   - {fileID: 11400000, guid: f9f44f0a9f752024aa560b7386d3d1c0, type: 2}
   - {fileID: 11400000, guid: c00ce7c4c779c5b4c9c7c5d30d654003, type: 2}
-  currentNumberLevel: 12
+  currentNumberLevel: 0
 --- !u!1 &472530345
 GameObject:
   m_ObjectHideFlags: 0

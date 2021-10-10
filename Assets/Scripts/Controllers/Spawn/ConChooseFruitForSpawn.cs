@@ -72,11 +72,13 @@ public class ConChooseFruitForSpawn : MonoBehaviour
         }
 
         MixObjectsRandom();
+        MixObjectsRandom();
     }
 
     private int CountProcentObject(float procentRandom)
     {
-        int count = (int)procentRandom / 10;
+        int count = (int)procentRandom / 2;
+
         return count;
     }
 

@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.40392157, g: 0.6156863, b: 0.8235294, a: 1}
+  m_Color: {r: 0.51370597, g: 0.6030044, b: 0.9811321, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1493,6 +1493,85 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!1001 &737116055
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 390261922038967740, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634859, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_Name
+      value: ScreeShotController
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634859, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390261922453634861, guid: 38e8affafe5238d4a9f8ed2d7f4befcf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38e8affafe5238d4a9f8ed2d7f4befcf, type: 3}
 --- !u!1 &794526085
 GameObject:
   m_ObjectHideFlags: 0
@@ -12536,7 +12615,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1401251161
+  m_SortingLayerID: -953404263
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1952896985
