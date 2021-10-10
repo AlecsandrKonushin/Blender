@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpawnDamager_Ice
   m_EditorClassIdentifier: 
   TypeObject: 1
-  ProcentRandom: 22
+  ProcentRandom: 24
   DragObject: 0.6
   TypeDamager: 1

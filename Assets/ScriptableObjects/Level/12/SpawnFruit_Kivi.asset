@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpawnFruit_Kivi
   m_EditorClassIdentifier: 
   TypeObject: 0
-  ProcentRandom: 12
+  ProcentRandom: 13
   DragObject: 0.6
   TypeFruit: 4

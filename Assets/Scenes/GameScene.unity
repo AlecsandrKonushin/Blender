@@ -2790,7 +2790,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d88cdf4fcf198b44bfcbac3ef257c6c, type: 2}
   - {fileID: 11400000, guid: f9f44f0a9f752024aa560b7386d3d1c0, type: 2}
   - {fileID: 11400000, guid: c00ce7c4c779c5b4c9c7c5d30d654003, type: 2}
-  currentNumberLevel: 0
+  - {fileID: 11400000, guid: 5f49b21c00225774bbbb818c55963345, type: 2}
+  - {fileID: 11400000, guid: 1077da44846df2349984bf25bc22b3be, type: 2}
+  currentNumberLevel: 14
 --- !u!1 &472530345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,7 +3687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 45
 --- !u!222 &623237986
 CanvasRenderer:
   m_ObjectHideFlags: 0

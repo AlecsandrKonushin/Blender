@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ManagerSpawner : Singleton<ManagerSpawner>
 {
@@ -64,6 +65,20 @@ public class ManagerSpawner : Singleton<ManagerSpawner>
         for (int i = 0; i < 4; i++)
         {
             CreateObject(i);
+        }
+    }
+
+    public void EndGame()
+    {
+        StartCoroutine(CoSpawnFruits());
+    }
+
+    private IEnumerator CoSpawnFruits()
+    {
+        for (int i = 0; i < 70; i++)
+        {
+            yield return new WaitForSeconds(.05f);
+            CreateObject();
         }
     }
 

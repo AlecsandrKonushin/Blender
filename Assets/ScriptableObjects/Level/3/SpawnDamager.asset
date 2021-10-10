@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpawnDamager
   m_EditorClassIdentifier: 
   TypeObject: 1
-  ProcentRandom: 20
+  ProcentRandom: 30
   DragObject: 1
   TypeDamager: 0

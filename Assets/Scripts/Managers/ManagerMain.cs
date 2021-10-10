@@ -69,6 +69,14 @@ public class ManagerMain : Singleton<ManagerMain>
     {
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
 
+        ManagerSpawner.Instance.EndGame();
+        StartCoroutine(CoWaitEndGame());
+    }
+
+    private IEnumerator CoWaitEndGame()
+    {
+        yield return new WaitForSeconds(5f);
+
         ManagerCanvaces.Instance.ShowEndLevelPanel();
     }
 }
