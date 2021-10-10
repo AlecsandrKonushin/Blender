@@ -69,6 +69,7 @@ public class ManagerMain : Singleton<ManagerMain>
     public void EndLevels()
     {
         ManagerStates.Instance.ChangeStateGame(TypeStateGame.LoadingLevel);
+        ManagerTime.Instance.TimerStop();
 
         collidersBlender.SetActive(false);
         ManagerSpawner.Instance.EndGame();
